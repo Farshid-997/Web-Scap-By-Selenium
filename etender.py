@@ -1,4 +1,3 @@
-
 from selenium import webdriver
 import pandas as pd
 import time
@@ -13,7 +12,7 @@ driver.get('https://www.eprocure.gov.bd/resources/common/StdTenderSearch.jsp?h=t
 time.sleep(2)
 
 # Go to specific page number, if script fails due to network error.
-page_number = '3252'
+page_number = '580'
 text_box_field = driver.find_element("id", "dispPage")
 text_box_field.clear()
 text_box_field.send_keys(page_number)
@@ -25,7 +24,7 @@ time.sleep(2)
 
 
 def save_to_csv(data_lists):
-    with open("output_e_tender.csv", "a", newline="", encoding="utf-8") as f:
+    with open("output_e_tender1.csv", "a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerows(data_lists)
 
